@@ -306,12 +306,12 @@ const ChatListDrawer: React.FC<Props> = (props) => {
               onClick={onClickNewChat}
               labelComponent={t('button.newChat')}
             />
-            {/* <DrawerItem
+            <DrawerItem
               isActive={false}
               icon={<PiCompass />}
               to="bot/explore"
               labelComponent={t('button.botConsole')}
-            /> */}
+            />
             {isAdmin && (
               <ExpandableDrawerGroup
                 label={t('app.adminConsoles')}
@@ -337,7 +337,7 @@ const ChatListDrawer: React.FC<Props> = (props) => {
               </ExpandableDrawerGroup>
             )}
 
-            {/* <ExpandableDrawerGroup
+            <ExpandableDrawerGroup
               label={t('app.starredBots')}
               className="border-t pt-1">
               {starredBots?.map((bot) => (
@@ -367,7 +367,7 @@ const ChatListDrawer: React.FC<Props> = (props) => {
                     onClick={onClickNewBotChat}
                   />
                 ))}
-            </ExpandableDrawerGroup> */}
+            </ExpandableDrawerGroup>
 
             <ExpandableDrawerGroup
               label={t('app.conversationHistory')}
