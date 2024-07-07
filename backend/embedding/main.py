@@ -20,7 +20,7 @@ from app.utils import compose_upload_document_s3_path
 from aws_lambda_powertools.utilities import parameters
 from embedding.loaders import UrlLoader
 from embedding.loaders.base import BaseLoader
-from embedding.loaders.opensearch import opensearch_utils
+# from embedding.loaders.opensearch import opensearch_utils
 from embedding.loaders.s3 import S3FileLoader
 from embedding.wrapper import DocumentSplitter, Embedder
 from llama_index.core.node_parser import SentenceSplitter
