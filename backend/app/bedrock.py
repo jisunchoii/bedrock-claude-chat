@@ -231,7 +231,7 @@ def calculate_query_embedding(question: str) -> list[float]:
 
     assert model_id == "amazon.titan-embed-text-v2:0"
 
-    payload = json.dumps({"inputText": [question]})
+    payload = json.dumps({"inputText": question})
     accept = "application/json"
     content_type = "application/json"
 
