@@ -136,6 +136,7 @@ Resources:
               "build": {
                 "commands": [
                   "echo 'Build phase...'",
+                  # jschoii 주소변경
                   "git clone --branch v1 https://github.com/jisunchoii/bedrock-claude-chat-sop.git",
                   "cd bedrock-claude-chat-sop",
                   "if [ \"$ALLOW_SELF_REGISTER\" = \"false\" ]; then sed -i 's/\"selfSignUpEnabled\": true,/\"selfSignUpEnabled\": false,/' cdk/cdk.json; fi",

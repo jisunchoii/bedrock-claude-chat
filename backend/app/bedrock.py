@@ -225,13 +225,14 @@ def calculate_query_embedding_og(question: str) -> list[float]:
 
     return embedding
 
-#jschoii : titan v2 로 변경
+#jschoii : titan v2 로 변경 (모델, input param type)
 def calculate_query_embedding(question: str) -> list[float]:
     model_id = DEFAULT_EMBEDDING_CONFIG["model_id"]
 
     assert model_id == "amazon.titan-embed-text-v2:0"
 
-    payload = json.dumps({"inputText": question})
+    # payload = json.dumps({"inputText": question}) jschoii 수정
+    payload = {"inputText": question}
     accept = "application/json"
     content_type = "application/json"
 
@@ -246,7 +247,8 @@ def calculate_query_embedding(question: str) -> list[float]:
 #jschoii : titan v2 로 변경
 def calculate_document_embeddings(documents: list[str]) -> list[list[float]]:
     def _calculate_document_embeddings(documents: list[str]) -> list[list[float]]:
-        payload = json.dumps({"inputText": documents})
+        # payload = json.dumps({"inputText": documents}) jschoii 수정
+        payload = {"inputText": documents}
         accept = "application/json"
         content_type = "application/json"
         response = client.invoke_model(
